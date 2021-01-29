@@ -53,7 +53,7 @@ m_true = -0.9594
 b_true = 4.294
 f_true = 0.534
 header = ["m", "b", "logf"]
-os.mkdir("emcee_output")
+os.makedirs("emcee_output", exist_ok=True)
 np.savetxt(
     "emcee_output/injected.txt", [[m_true, b_true, f_true]], delimiter="\t",
     header="\t".join(header)
